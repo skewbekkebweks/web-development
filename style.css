@@ -1,19 +1,18 @@
 html {
     scroll-behavior: smooth;
-    background: #fdd; 
+    background-color: #FDD;
 }
 
 a {
-    color: #000000;
+    color: #1976D2;
 }
 
 .categories {
-    background-color: #444444;
+    background-color: #FDD;
 }
 
 .categories a {
     float: left;
-    color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -23,7 +22,7 @@ a {
 .top {
     overflow: hidden;
     position: sticky;
-    top: 0px;
+    top: 0;
     margin: 15px;
 }
 
@@ -34,8 +33,7 @@ a {
 }
 
 .categories a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #E8F5EC;
 }
 
 table {
@@ -48,7 +46,10 @@ td, th {
     padding: 8px;
 }
 
+tr {
+    color: #1976D2;
+}
+
 tr:nth-child(even) {
     background-color: #E8F5EC;
-    color: #1976d2;
 }
