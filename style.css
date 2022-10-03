@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    background: #fdd; 
 }
 
 a {
@@ -20,8 +21,10 @@ a {
 }
 
 .top {
-    position: fixed;
-    right: 30px;
+    overflow: hidden;
+    position: sticky;
+    top: 0px;
+    margin: 15px;
 }
 
 .bottom {
@@ -46,6 +49,6 @@ td, th {
 }
 
 tr:nth-child(even) {
-    background-color: #444444;
-    color: white;
+    background-color: #E8F5EC;
+    color: #1976d2;
 }
