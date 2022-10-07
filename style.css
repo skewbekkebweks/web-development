@@ -50,3 +50,7 @@ tr {
 tr:nth-child(even) {
     background-color: #E8F5EC;
 }
+caption {
+    font-size: 20px;
+
+}
