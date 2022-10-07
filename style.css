@@ -3,10 +3,6 @@ html {
     background-color: #FDD;
 }
 
-a {
-    color: #1976D2;
-}
-
 .categories {
     background-color: #FDD;
 }
@@ -37,11 +33,12 @@ a {
 }
 
 table {
+    margin: auto;
     border-collapse: collapse;
 }
 
 td, th {
-    border: 1px solid #333333;
+    border: 1px solid #1976D2;
     text-align: left;
     padding: 8px;
 }
