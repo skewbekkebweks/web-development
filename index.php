@@ -1,26 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Tables</title>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
-    <link rel="icon"
-          href="https://sun9-71.userapi.com/impf/c854528/v854528816/113120/rqhbUgxbvmA.jpg?size=986x1080&quality=96&sign=fb15b8926a6494c08c90e142ce2d0996&type=album"/>
-</head>
-<pre>
-    <?php
-    echo "<table>";
-    echo "<caption>Multiplicax`tion table</caption>";
+<?php
+
+require_once "./functions.php";
+
+echo min_(1234, 12345) . PHP_EOL;
+
+$id = 1;
+$link = 'https://vk.com/im?rel=' . $id;
+
+$myHtml = '<a href="' . $link . '">chat</a>';
+$myHtml = <<<HTML
+<a href="$link" target="_top">Chat</a>
+HTML;
+
+echo $myHtml;
+
+echo str_pad($id, 5, 0, STR_PAD_LEFT);
+$pos = mb_stripos('мама мыла раму', 'Мама');
+
+if ($pos !== false) {
+    echo 'Нашлось' . PHP_EOL;
+}
+$arr = [1,2,3,4,5,6, 'word1', 'word2', 'word' => 1, 1 => 17];
+var_dump('<pre>', $arr);
+
+$x = &$arr['nf'];
+if ($x == null) {
     $x = 10;
-    if (isset($_GET['first'])) {
-        $x = $_GET['first'];
-    }
-    for ($i = 1; $i <= $x; $i++) {
-        echo "<tr>";
-        for ($j = 1; $j <= $x; $j++) {
-            echo "<td>" . $i * $j . "</td>";
-        }
-        echo "</tr>";
-    }
-    echo "</table>";
-    ?>
+}
+
+error_reporting(E_ALL ^ E_NOTICE);
+$x[124];
+error_reporting(E_ALL);
+$x[124];
