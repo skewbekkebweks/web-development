@@ -10,10 +10,14 @@
 <pre>
     <?php
     echo "<table>";
-    echo "<caption>Multiplication table</caption>";
-    for ($i = 1; $i <= 10; $i++) {
+    echo "<caption>Multiplicax`tion table</caption>";
+    $x = 10;
+    if (isset($_GET['first'])) {
+        $x = $_GET['first'];
+    }
+    for ($i = 1; $i <= $x; $i++) {
         echo "<tr>";
-        for ($j = 1; $j <= 10; $j++) {
+        for ($j = 1; $j <= $x; $j++) {
             echo "<td>" . $i * $j . "</td>";
         }
         echo "</tr>";
