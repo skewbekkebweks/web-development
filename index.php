@@ -1,34 +1,22 @@
-<?php
-
-require_once "./functions.php";
-
-echo min_(1234, 12345) . PHP_EOL;
-
-$id = 1;
-$link = 'https://vk.com/im?rel=' . $id;
-
-$myHtml = '<a href="' . $link . '">chat</a>';
-$myHtml = <<<HTML
-<a href="$link" target="_top">Chat</a>
-HTML;
-
-echo $myHtml;
-
-echo str_pad($id, 5, 0, STR_PAD_LEFT);
-$pos = mb_stripos('мама мыла раму', 'Мама');
-
-if ($pos !== false) {
-    echo 'Нашлось' . PHP_EOL;
-}
-$arr = [1,2,3,4,5,6, 'word1', 'word2', 'word' => 1, 1 => 17];
-var_dump('<pre>', $arr);
-
-$x = &$arr['nf'];
-if ($x == null) {
-    $x = 10;
-}
-
-error_reporting(E_ALL ^ E_NOTICE);
-$x[124];
-error_reporting(E_ALL);
-$x[124];
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="icon"
+          href="https://sun9-71.userapi.com/impf/c854528/v854528816/113120/rqhbUgxbvmA.jpg?size=986x1080&quality=96&sign=fb15b8926a6494c08c90e142ce2d0996&type=album"/>
+    <title>Tasks</title>
+</head>
+<body>
+<div class="categories">
+    <a href="tasks/task3.php">Task 3</a>
+    <a href="tasks/task4.php">Task 4</a>
+    <a href="tasks/task5.php">Task 5</a>
+    <a href="tasks/task6.php">Task 6</a>
+    <a href="tasks/task7.php">Task 7</a><br><br>
+</div>
+</body>
+</html>
