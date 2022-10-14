@@ -21,7 +21,8 @@
     <a href="task6.php">Task 6</a>
     <a href="task7.php">Task 7</a><br><br>
 </div>
-<p>$$\huge x^{5} + 6 x^{5} + 10 x^{3} + 25 x^{2} + 30 x + 101$$</p>
+<p>$$\huge x^{5} + 6 x^{4} + 10 x^{3} + 25 x^{2} + 30 x + 101 =$$</p>
+<p>$$\huge = x * (x * (x * (x * (x + 6) + 10) + 25) + 30) + 101$$</p>
 <form action="task6.php" method="post">
     <p>x: <input type="number" name="x"/></p>
     <p><input type="submit"/></p>
@@ -33,7 +34,7 @@
 if (isset($_POST['x']) and $_POST['x'] != '') {
     $x = $_POST['x'];
     $res = pow($x, 5) + 6 * pow($x, 4) + 10 * pow($x, 3) + 25 * pow($x, 2) + 30 * $x + 101;
-    $str = '<p>$$\huge x^{5} + 6 * x^{5} + 10 * x^{3} + 25 * x^{2} + 30 * x + 101 = ' . $res . '$$</p>';
-    $str = str_replace('x', $x, $str);
-    echo $str;
+    $str1 = '<p>$$\huge x^{5} + 6 * x^{4} + 10 * x^{3} + 25 * x^{2} + 30 * x + 101 = $$</p><p>$$\huge = x * (x * (x * (x * (x + 6) + 10) + 25) + 30) + 101 = ' . $res . '$$</p>';
+    $str1 = str_replace('x', $x, $str1);
+    echo $str1;
 }
