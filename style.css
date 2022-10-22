@@ -1,11 +1,11 @@
 html {
     scroll-behavior: smooth;
     background-color: #FDD;
-    text-align: center;
 }
 
 .categories {
-    background-color: #FDD;
+    background-color: #FFDDFF;
+    width: 100%;
 }
 
 .categories a {
@@ -18,9 +18,9 @@ html {
 
 .top {
     overflow: hidden;
-    position: sticky;
+    position: fixed;
     top: 0;
-    margin: 15px;
+    left: 0;
 }
 
 .bottom {
@@ -57,4 +57,33 @@ caption {
 input {
     border: 2px solid #1976D2;
     border-radius: 4px;
+}
+aside {
+    margin-top: 10px;
+    padding: 15px 30px;
+    background-color: #F6F6F6;
+    border-radius: 15px;
+    max-width: 20%;
+    float: left;
+}
+
+aside ol {
+    color: #1976D2;
+    font-size: large;
+}
+aside li {
+    padding: 8px 0 8px 0;
+}
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+main {
+    float: left;
+    width: 70%;
+    text-align: center;
 }

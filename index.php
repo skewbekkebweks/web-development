@@ -11,9 +11,35 @@
     <title>Homework</title>
 </head>
 <body>
-<div class="categories">
-    <a href="tasks/rowCount.php" target="_blank">Row Count</a>
-    <a href="tasks/doubleValue.php" target="_blank">Double Value</a><br><br>
+<div id="wrapper">
+    <aside>
+        <ol>
+            <li>
+                <a href="tasks/task3.php">Task 3</a>
+            </li>
+            <li>
+                <a href="tasks/task4.php">Task 4</a>
+            </li>
+            <li>
+                <a href="tasks/task5.php">Task 5</a>
+            </li>
+            <li>
+                <a href="tasks/task6.php">Task 6</a>
+            </li>
+            <li>
+                <a href="tasks/task7.php">Task 7</a>
+            </li>
+            <li>
+                <a href="tasks/numberedTable.php">Numbered Table</a>
+            </li>
+            <li>
+                <a href="tasks/doubleValue.php">double Value</a>
+            <   /li>
+        </ol>
+    </aside>
+    <main>
+        <h1>Web-development</h1>
+    </main>
 </div>
 </body>
 </html>

@@ -8,33 +8,56 @@
     <link rel="stylesheet" type="text/css" href="../style.css"/>
     <link rel="icon"
           href="https://sun9-71.userapi.com/impf/c854528/v854528816/113120/rqhbUgxbvmA.jpg?size=986x1080&quality=96&sign=fb15b8926a6494c08c90e142ce2d0996&type=album"/>
-    <title>Tasks</title>
+    <title>Task 6</title>
     <script type="text/javascript"
             src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
 </head>
 <body>
-<div class="categories">
-    <a href="task3.php" target="_blank">Task 3</a>
-    <a href="task4.php" target="_blank">Task 4</a>
-    <a href="task5.php" target="_blank">Task 5</a>
-    <a href="task6.php" target="_blank">Task 6</a>
-    <a href="task7.php" target="_blank">Task 7</a><br><br>
-</div>
-<p>$$\huge x^{5} + 6 x^{4} + 10 x^{3} + 25 x^{2} + 30 x + 101 =$$</p>
-<p>$$\huge = x * (x * (x * (x * (x + 6) + 10) + 25) + 30) + 101$$</p>
-<form action="task6.php" method="post">
-    <p>x: <input type="number" name="x"/></p>
-    <p><input type="submit"/></p>
-</form>
+<div id="wrapper">
+    <aside>
+        <ol>
+            <li>
+                <a href="task3.php">Task 3</a>
+            </li>
+            <li>
+                <a href="task4.php">Task 4</a>
+            </li>
+            <li>
+                <a href="task5.php">Task 5</a>
+            </li>
+            <li>
+                <a href="task6.php">Task 6</a>
+            </li>
+            <li>
+                <a href="task7.php">Task 7</a>
+            </li>
+            <li>
+                <a href="numberedTable.php">Numbered Table</a>
+            </li>
+            <li>
+                <a href="doubleValue.php">double Value</a>
+            </li>
+        </ol>
+    </aside>
+    <main>
+        <img src="../static/pictures/task6.png" alt="Не найдено">
+        <p>$$\huge x^{5} + 6 x^{4} + 10 x^{3} + 25 x^{2} + 30 x + 101 =$$</p>
+        <p>$$\huge = x * (x * (x * (x * (x + 6) + 10) + 25) + 30) + 101$$</p>
+        <form action="task6.php" method="post">
+            <p>x: <input type="number" name="x"/></p>
+            <p><input type="submit"/></p>
+        </form>
+
+        <?php
+        if (isset($_POST['x']) and $_POST['x'] != '') {
+            $x = $_POST['x'];
+            $res = pow($x, 5) + 6 * pow($x, 4) + 10 * pow($x, 3) + 25 * pow($x, 2) + 30 * $x + 101;
+            $str1 = '<p>$$\huge x^{5} + 6 * x^{4} + 10 * x^{3} + 25 * x^{2} + 30 * x + 101 = $$</p><p>$$\huge = x * (x * (x * (x * (x + 6) + 10) + 25) + 30) + 101 = ' . $res . '$$</p>';
+            $str1 = str_replace('x', $x, $str1);
+            echo $str1;
+        }
+        ?>
+    </main>
 </body>
 </html>
-
-<?php
-if (isset($_POST['x']) and $_POST['x'] != '') {
-    $x = $_POST['x'];
-    $res = pow($x, 5) + 6 * pow($x, 4) + 10 * pow($x, 3) + 25 * pow($x, 2) + 30 * $x + 101;
-    $str1 = '<p>$$\huge x^{5} + 6 * x^{4} + 10 * x^{3} + 25 * x^{2} + 30 * x + 101 = $$</p><p>$$\huge = x * (x * (x * (x * (x + 6) + 10) + 25) + 30) + 101 = ' . $res . '$$</p>';
-    $str1 = str_replace('x', $x, $str1);
-    echo $str1;
-}

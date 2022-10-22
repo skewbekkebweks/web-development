@@ -8,10 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../style.css"/>
     <link rel="icon"
           href="https://sun9-71.userapi.com/impf/c854528/v854528816/113120/rqhbUgxbvmA.jpg?size=986x1080&quality=96&sign=fb15b8926a6494c08c90e142ce2d0996&type=album"/>
-    <title>Task 3</title>
-    <script type="text/javascript"
-            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>
+    <title>Row Count</title>
 </head>
 <body>
 <div id="wrapper">
@@ -41,19 +38,19 @@
         </ol>
     </aside>
     <main>
-        <img src="../static/pictures/task3.png" alt="Не найдено">
-        <p>$$\huge V = \frac{4}{3} \pi R^{3}$$</p>
-        <form action="task3.php" method="post">
-            <p>R: <input type="number" name="radius"></p>
+        <form action="numberedTable.php" method="post">
+            <p>Count: <input type="number" name="count"></p>
             <p><input type="submit"/></p>
         </form>
 
         <?php
-        if (isset($_POST['radius']) and $_POST['radius'] != '') {
-            $radius = $_POST['radius'];
-            $res = 4 / 3 * M_PI * pow($radius, 3);
-            $str = '<p>$$\huge V = \frac{4}{3} \pi ' . $radius . '^{3} = ' . $res . '$$</p>';
-            echo $str;
+        if (isset($_POST['count']) and $_POST['count'] != '') {
+            $row_count = $_POST['count'];
+            echo '<table>';
+            for ($i = 1; $i <= $row_count; $i++) {
+                echo '<tr><td>' . $i . '</td></tr>';
+            }
+            echo '</table>';
         }
         ?>
     </main>
