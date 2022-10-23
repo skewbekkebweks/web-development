@@ -33,6 +33,9 @@
                 <a href="task7.php">Task 7</a>
             </li>
             <li>
+                <a href="MultiplicationTable.php">Multiplication Table</a>
+            </li>
+            <li>
                 <a href="numberedTable.php">Numbered Table</a>
             </li>
             <li>
@@ -41,12 +44,17 @@
         </ol>
     </aside>
     <main>
+        <h1>Task 3</h1>
         <img src="../static/pictures/task3.png" alt="Не найдено">
         <p>$$\huge V = \frac{4}{3} \pi R^{3}$$</p>
-        <form action="task3.php" method="post">
-            <p>R: <input type="number" name="radius"></p>
-            <p><input type="submit"/></p>
-        </form>
+        <fieldset>
+            <legend>Values:</legend>
+            <form action="task3.php" method="post">
+                <p>R: <input type="number" name="radius" id="R"></p>
+                <p><input type="submit" value="Submit"/></p>
+            </form>
+            <button onclick="R.value=10">Default values</button>
+        </fieldset>
 
         <?php
         if (isset($_POST['radius']) and $_POST['radius'] != '') {

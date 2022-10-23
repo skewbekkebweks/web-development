@@ -30,11 +30,14 @@
                 <a href="tasks/task7.php">Task 7</a>
             </li>
             <li>
+                <a href="tasks/MultiplicationTable.php">Multiplication Table</a>
+            </li>
+            <li>
                 <a href="tasks/numberedTable.php">Numbered Table</a>
             </li>
             <li>
                 <a href="tasks/doubleValue.php">double Value</a>
-            <   /li>
+            </li>
         </ol>
     </aside>
     <main>

@@ -46,6 +46,9 @@ function step_by_step($x, $y, $z)
                 <a href="task7.php">Task 7</a>
             </li>
             <li>
+                <a href="MultiplicationTable.php">Multiplication Table</a>
+            </li>
+            <li>
                 <a href="numberedTable.php">Numbered Table</a>
             </li>
             <li>
@@ -54,14 +57,19 @@ function step_by_step($x, $y, $z)
         </ol>
     </aside>
     <main>
+        <h1>Task 5</h1>
         <img src="../static/pictures/task5.png" alt="Не найдено">
         <p>$$\huge ((x + 2) * y - z) / y + y * z$$</p>
-        <form action="task5.php" method="post">
-            <p>x: <input type="number" name="x"/></p>
-            <p>y: <input type="number" name="y"/></p>
-            <p>z: <input type="number" name="z"/></p>
-            <p><input type="submit"/></p>
-        </form>
+        <fieldset>
+            <legend>Values:</legend>
+            <form action="task5.php" method="post">
+                <p>x: <input type="number" name="x" id="x"/></p>
+                <p>y: <input type="number" name="y" id="y"/></p>
+                <p>z: <input type="number" name="z" id="z"/></p>
+                <p><input type="submit" value="Submit"/></p>
+            </form>
+            <button onclick="x.value=1;y.value=2;z.value=3">Default values</button>
+        </fieldset>
 
         <?php
         if (isset($_POST['x']) and $_POST['x'] != '' and

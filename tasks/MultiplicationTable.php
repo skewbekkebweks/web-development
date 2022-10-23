@@ -1,21 +1,3 @@
-<?php
-function step_by_step($x, $y)
-{
-    $s1 = 1 + $y;
-    $s2 = ($x + $y);
-    $s3 = pow($x, 2);
-    $s4 = $s3 - 4;
-    $s5 = 1 / $s4;
-    $s6 = $y + $s5;
-    $s7 = $s2 / $s6;
-    $s8 = 2 * $x;
-    $s9 = pow($y, 2);
-    $s10 = $s8 + $s9;
-    $s11 = $s10 - $s7;
-    return $s1 * $s11;
-}
-
-?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -26,7 +8,7 @@ function step_by_step($x, $y)
     <link rel="stylesheet" type="text/css" href="../style.css"/>
     <link rel="icon"
           href="https://sun9-71.userapi.com/impf/c854528/v854528816/113120/rqhbUgxbvmA.jpg?size=986x1080&quality=96&sign=fb15b8926a6494c08c90e142ce2d0996&type=album"/>
-    <title>Task 4</title>
+    <title>Task 3</title>
     <script type="text/javascript"
             src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
@@ -62,36 +44,31 @@ function step_by_step($x, $y)
         </ol>
     </aside>
     <main>
-        <h1>Task 4</h1>
-        <img src="../static/pictures/task4.png" alt="Не найдено">
-        <p>$$\huge (1 + y) * (2x + y^{2} - (x + y) / (y + 1 / (x^{2} - 4)))$$</p>
+        <h1>Multiplication Table</h1>
         <fieldset>
             <legend>Values:</legend>
-            <form action="task4.php" method="post">
-                <p>x: <input type="number" name="x" id="x"/></p>
-                <p>y: <input type="number" name="y" id="y"/></p>
+            <form action="MultiplicationTable.php" method="post">
+                <p>Size: <input type="number" name="size" id="size"></p>
                 <p><input type="submit" value="Submit"/></p>
             </form>
-            <button onclick="x.value=3;y.value=5">Default values</button>
+            <button onclick="size.value=10">Default values</button>
         </fieldset>
 
-
         <?php
-        if (isset($_POST['x']) and $_POST['x'] != '' and isset($_POST['y']) and $_POST['y'] != '') {
-            $x = $_POST['x'];
-            $y = $_POST['y'];
-            try {
-                $res = (1 + $y) * (2 * $x + pow($y, 2) - ($x + $y) / ($y + 1 / (pow($x, 2) - 4)));
-                $res = step_by_step($x, $y);
-                $str = '<p>$$\huge (1 + y) * (2 * x + y^{2} - (x + y) / (y + 1 / (x^{2} - 4))) =' . $res . ' $$</p>';
-                $str = str_replace('x', $x, $str);
-                $str = str_replace('y', $y, $str);
-                echo $str;
-            } catch (DivisionByZeroError $e) {
-                echo 'Недопустимые значения(произошло деление на ноль)';
+        if (isset($_POST['size']) and $_POST['size'] != '') {
+            $size = $_POST['size'];
+            echo '<table>';
+            for ($i = 1; $i <= $size; $i++) {
+                echo "<tr>";
+                for ($j = 1; $j <= $size; $j++) {
+                    echo "<td>" . $i * $j . "</td>";
+                }
+                echo "</tr>";
             }
+            echo '</table>';
         }
         ?>
     </main>
 </body>
 </html>
+<pre>

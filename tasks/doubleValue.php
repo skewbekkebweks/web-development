@@ -30,6 +30,9 @@
                 <a href="task7.php">Task 7</a>
             </li>
             <li>
+                <a href="MultiplicationTable.php">Multiplication Table</a>
+            </li>
+            <li>
                 <a href="numberedTable.php">Numbered Table</a>
             </li>
             <li>
@@ -38,10 +41,15 @@
         </ol>
     </aside>
     <main>
-        <form action="doubleValue.php" method="post">
-            <p>Count: <input type="number" name="count"></p>
-            <p><input type="submit"/></p>
-        </form>
+        <h1>Double Value</h1>
+        <fieldset>
+            <legend>Values:</legend>
+            <form action="doubleValue.php" method="post">
+                <p>Count: <input type="number" name="count" id="count"></p>
+                <p><input type="submit" value="Submit"/></p>
+            </form>
+            <button onclick="count.value=20">Default values</button>
+        </fieldset>
 
         <?php
 

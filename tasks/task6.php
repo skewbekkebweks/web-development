@@ -33,6 +33,9 @@
                 <a href="task7.php">Task 7</a>
             </li>
             <li>
+                <a href="MultiplicationTable.php">Multiplication Table</a>
+            </li>
+            <li>
                 <a href="numberedTable.php">Numbered Table</a>
             </li>
             <li>
@@ -41,13 +44,18 @@
         </ol>
     </aside>
     <main>
+        <h1>Task 6</h1>
         <img src="../static/pictures/task6.png" alt="Не найдено">
         <p>$$\huge x^{5} + 6 x^{4} + 10 x^{3} + 25 x^{2} + 30 x + 101 =$$</p>
         <p>$$\huge = x * (x * (x * (x * (x + 6) + 10) + 25) + 30) + 101$$</p>
-        <form action="task6.php" method="post">
-            <p>x: <input type="number" name="x"/></p>
-            <p><input type="submit"/></p>
-        </form>
+        <fieldset>
+            <legend>Values:</legend>
+            <form action="task6.php" method="post">
+                <p>x: <input type="number" name="x" id="x"/></p>
+                <p><input type="submit" value="Submit"/></p>
+            </form>
+            <button onclick="x.value=3">Default values</button>
+        </fieldset>
 
         <?php
         if (isset($_POST['x']) and $_POST['x'] != '') {

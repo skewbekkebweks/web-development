@@ -33,6 +33,9 @@
                 <a href="task7.php">Task 7</a>
             </li>
             <li>
+                <a href="MultiplicationTable.php">Multiplication Table</a>
+            </li>
+            <li>
                 <a href="numberedTable.php">Numbered Table</a>
             </li>
             <li>
@@ -41,12 +44,17 @@
         </ol>
     </aside>
     <main>
+        <h1>Task 7</h1>
         <img src="../static/pictures/task7.png" alt="Не найдено">
-        <form action="task7.php" method="post">
-            <p>a: <input type="number" name="a"/></p>
-            <p>b: <input type="number" name="b"/></p>
-            <p><input type="submit"/></p>
-        </form>
+        <fieldset>
+            <legend>Values:</legend>
+            <form action="task7.php" method="post">
+                <p>a: <input type="number" name="a" id="a"/></p>
+                <p>b: <input type="number" name="b" id="b"/></p>
+                <p><input type="submit" value="Submit"/></p>
+            </form>
+            <button onclick="a.value=1;b.value=2">Default values</button>
+        </fieldset>
 
         <?php
         if (isset($_POST['a']) and $_POST['a'] != '' and
