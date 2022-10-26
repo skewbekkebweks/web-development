@@ -1,6 +1,6 @@
 <?php
 
-namespace Class\Classes;
+namespace Class\Lib;
 
 class Group
 {
@@ -22,7 +22,7 @@ class Group
      */
     public function getTitle()
     {
-        return $this->title;
+        return $this->title . '000';
     }
 
     /**
@@ -64,6 +64,5 @@ class Group
             $this->students[] = $students;
         }
     }
-
 
 }

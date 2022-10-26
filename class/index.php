@@ -1,23 +1,32 @@
 <?php
-require_once 'classes/Group.php';
-require_once 'classes/Student.php';
-$group = new Group('web-development');
-$s1 = new Student('миша', 15, $group);
-echo Student::$handsCount . PHP_EOL;
-Student::$handsCount = 3;
-$s2 = new Student('тимур', 16, $group);
-echo $s2::$handsCount;
-$s3 = new Student('фархад', 16, $group);
-$s4 = new Student('сергей', 16, $group);
-$s5 = new Student('юрий', 26, $group);
-$s6 = new Student('дамир', 15, $group);
-$s7 = new Student('данил', 16, $group);
-$s8 = new Student('максим', 16, $group);
-$s9 = new Student('виталя', 16, $group);
-$s10 = new Student('костя', 16, $group);
-?>
-<pre
-    <?php
-    var_dump($group);
-    echo $s1->name;
 
+require_once './functions.php';
+require_once './autoload.php';
+
+use Class\Classes\Group;
+use Class\Lib\Group as LibGroup;
+
+$g = new Group('WEB');
+$g = new Group('WEB');
+$g = new Group('WEB');
+$g = new Group('WEB');
+$g = new Group('WEB');
+$g = new Group('WEB');
+$g = new Group('WEB');
+$g = new Group('WEB');
+$g = new Group('WEB');
+$g = new Group('WEB');
+$g = new Group('WEB');
+$g = new Group('WEB');
+$g2 = new LibGroup('WEB');
+$a = new Class\Lib\A();
+
+file_put_contents('hello.json', json_encode([
+    "file" => 1,
+    "file2" => 2
+]));
+echo file_get_contents('hello.json');
+$v = json_decode(file_get_contents('hello.json'), true);
+echo PHP_EOL;
+var_dump($v);
+echo $v['file2'];
