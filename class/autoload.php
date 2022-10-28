@@ -1,16 +1,4 @@
 <?php
-
-$loader = function ($className) {
-    $parts = explode('\\', $className);
-    $last = $parts[count($parts) - 1];
-    unset($parts[count($parts) - 1]);
-    unset($parts[0]);
-    $str = "./" . implode('/', $parts) . "/";
-    $str = strtolower($str);
-    $str .= $last . '.php';
-
-    if (file_exists($str)) {
-        include $str;
-    }
-};
-spl_autoload_register($loader);
+require_once 'functions.php';
+require_once 'hello.php';
+require_once 'index.php';
