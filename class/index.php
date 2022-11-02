@@ -1,35 +1,26 @@
 <?php
 
-//require_once './functions.php';
-require_once 'autoload.php';
+require_once '../autoload.php';
 
-use Class\Classes\Group;
-use Class\Lib\Group as LibGroup;
+use Class\Classes\Mvc\UserController;
 
-//$g = new Group('WEB');
-//$g = new Group('WEB');
-//$g = new Group('WEB');
-//$g = new Group('WEB');
-//$g = new Group('WEB');
-//$g = new Group('WEB');
-//$g = new Group('WEB');
-//$g = new Group('WEB');
-//$g = new Group('WEB');
-//$g = new Group('WEB');
-//$g = new Group('WEB');
-//$g = new Group('WEB');
-//$g2 = new LibGroup('WEB');
-//$a = new Class\Lib\A();
-//
-//file_put_contents('hello.json', json_encode([
-//    "file" => 1,
-//    "file2" => 2
-//]));
-//echo file_get_contents('hello.json');
-//$v = json_decode(file_get_contents('hello.json'), true);
-//echo PHP_EOL;
-//var_dump($v);
-//echo $v['file2'];
+$controller = new UserController();
 
-$a = new Class\Classes\Group('1');
-var_dump($a);
+$parts = explode('?', $_SERVER['REQUEST_URI']);
+$path = $parts[0];
+$router = Class\Classes\Mvc\Router::$routes;
+
+if (isset($router[$path])) {
+    $handler = $router[$path];
+    $controller = new $handler['controller']();
+    $method = $handler[$_SERVER['REQUEST_METHOD']];
+    if (method_exists($controller, $method)) {
+        $request = new Class\Classes\Mvc\Request();
+        $result = $controller->$method($request);
+        echo $result;
+        exit(0);
+    }
+}
+http_response_code(404);
+
+
