@@ -8,8 +8,6 @@ $loader = function ($className) {
     $str = strtolower($str);
     $str .= $last . '.php';
 
-    echo $str . PHP_EOL;
-
     if (file_exists($str)) {
         include $str;
     }
