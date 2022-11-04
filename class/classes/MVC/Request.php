@@ -13,10 +13,10 @@ class Request
     }
     public function getParam(string $name, $default=null)
     {
-        if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
-            return isset($_POST[$name]) ? $_POST[$name] : $default;
+        if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+            return isset($_GET[$name]) ? $_GET[$name] : $default;
         }
-        return isset($_GET[$name]) ? $_GET[$name] : $default;
+        return isset($_POST[$name]) ? $_POST[$name] : $default;
     }
     public function getUrl()
     {
