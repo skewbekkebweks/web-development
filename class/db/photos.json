@@ -2,16 +2,16 @@
   {
     "id": 1,
     "user_id": 1,
-    "url": "https://localhost:8080/static/pictures/task3"
+    "url": "http://localhost:8080/static/pictures/task3.png"
   },
   {
     "id": 2,
     "user_id": 2,
-    "url": "https://localhost:8080/static/pictures/task4"
+    "url": "http://localhost:8080/static/pictures/task4.png"
   },
   {
     "id": 3,
     "user_id": 3,
-    "url": "https://localhost:8080/static/pictures/task5"
+    "url": "http://localhost:8080/static/pictures/task5.png"
   }
 ]

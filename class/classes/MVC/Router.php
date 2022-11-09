@@ -24,8 +24,8 @@ class Router
             $method = $handler[$_SERVER['REQUEST_METHOD']];
             if (method_exists($controller, $method)) {
                 $request = new Request();
-                $result = $controller->$method($request);
-                return $result;
+                $response = $controller->$method($request);
+                return $response;
             }
         }
         return false;
